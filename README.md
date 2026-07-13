@@ -6,12 +6,12 @@
 
 A two-part networking project featuring a custom, reliable transport protocol (**MiniTCP**) built entirely on top of UDP, and a **Download Manager** that utilizes this protocol to fetch files concurrently.
 
-## 🚀 Overview
+##  Overview
 
 1. **MiniTCP Protocol:** A reliable, connection-oriented transport layer implemented over standard UDP sockets. It ensures data integrity, sequencing, and delivery guarantees across lossy networks.
 2. **Download Manager:** A client/server application that splits a requested file into 9 distinct chunks. The client downloads all 9 chunks simultaneously over 9 independent MiniTCP connections, reassembling the file upon completion.
 
-## ✨ Core Protocol Features
+##  Core Protocol Features
 
 MiniTCP implements the fundamental mechanics of standard TCP:
 
@@ -20,7 +20,7 @@ MiniTCP implements the fundamental mechanics of standard TCP:
 - **Loss Detection & Recovery:** Implements Stop-and-Wait ARQ with timeout-based loss detection and automatic retransmission with backoff.
 - **Concurrency:** Each file chunk connection operates on its own ephemeral UDP port via independent Python threads.
 
-## 🏃 Run Guide
+##  Run Guide
 
 **Requirements:** Python 3.8+, standard library only — nothing to `pip install`.
 
